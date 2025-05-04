@@ -43,6 +43,7 @@
 
 .mega-menu__link {
   color: rgba(var(--color-foreground), 0.75);
+  font-size: 1.6rem;
   display: block;
   line-height: calc(1 + 0.3 / var(--font-body-scale));
   padding-bottom: 0.6rem;
@@ -53,7 +54,9 @@
 }
 
 .mega-menu__link--level-2 {
-  font-weight: bold;
+  font-weight: 500;
+  font-size: 1.5rem;
+  text-transform: uppercase;
 }
 
 .header--top-center .mega-menu__list {

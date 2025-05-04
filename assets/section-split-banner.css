@@ -1,0 +1,130 @@
+.split-banner {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+@media screen and (min-width: 750px) {
+  .split-banner {
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
+
+.split-banner__item {
+  position: relative;
+  width: 100%;
+}
+
+@media screen and (min-width: 750px) {
+  .split-banner__item {
+    width: 50%;
+  }
+
+  .split-banner__item:only-child {
+    width: 100%;
+  }
+}
+
+.split-banner__media-container {
+  width: 100%;
+  height: 100%;
+}
+
+.split-banner__media--large:not(.banner--adapt) {
+  min-height: 72rem;
+}
+
+.split-banner__media--medium:not(.banner--adapt) {
+  min-height: 56rem;
+}
+
+.split-banner__media--small:not(.banner--adapt) {
+  min-height: 42rem;
+}
+
+.split-banner__media {
+  object-fit: cover;
+}
+
+.split-banner__overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgb(var(--color-foreground));
+}
+
+.split-banner__overlay.gradient {
+  border: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1;
+  background: rgb(var(--color-foreground));
+}
+
+@media screen and (max-width: 749px) {
+  .split-banner__overlay.gradient {
+    border-radius: 0;
+  }
+}
+
+.split-banner__content-container {
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+  padding: 6rem;
+  
+}
+
+.split-banner__content {
+  background: none;
+  border-radius: 0;
+}
+
+@media screen and (max-width: 749px) {
+  .split-banner__content-container {
+    padding: 3rem;
+  }
+}
+
+.split-banner__content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  /* gap: 1.5rem; */
+  position: relative;
+  z-index: 1;
+}
+
+.split-banner__content[style*="--content-position: top-left"] {
+  align-items: flex-start;
+}
+
+.split-banner__content[style*="--content-position: bottom-left"] {
+  align-items: flex-end;
+}
+
+.split-banner__heading {
+  margin: 0 0 2.4rem 0;
+}
+
+.split-banner__content .button--secondary {
+  --alpha-button-background: 0;
+}
+
+@media screen and (max-width: 749px) {
+  .split-banner--stacked .banner__media {
+    min-height: 100%;
+  }
+}
+
+@media screen and (min-width: 750px) {
+  .split-banner--adapt {
+    height: 100%;
+  }
+}

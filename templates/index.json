@@ -16,13 +16,13 @@
           "type": "heading",
           "settings": {
             "heading": "Introducing May Collection",
-            "heading_size": "h1"
+            "heading_size": "h0"
           }
         },
         "text_WBJKXL": {
           "type": "text",
           "settings": {
-            "text": "Shirts and dresses in statement prints and a fresh color palette for spring.",
+            "text": "Shirts and dresses in statement prints and a fresh color palette for spring",
             "text_style": "body"
           }
         },
@@ -48,38 +48,14 @@
         "image": "{{ metaobjects.home_hero_banner[\"introducing-may-collection\"].image.value }}",
         "image_overlay_opacity": 0,
         "image_height": "medium",
-        "image_behavior": "none",
+        "image_behavior": "zoom-in",
         "desktop_content_position": "middle-center",
         "desktop_content_alignment": "center",
         "show_text_box": false,
         "color_scheme": "scheme-4",
         "stack_images_on_mobile": true,
         "mobile_content_alignment": "center",
-        "show_text_below": true
-      }
-    },
-    "rich_text": {
-      "type": "rich-text",
-      "blocks": {
-        "heading": {
-          "type": "heading",
-          "settings": {
-            "heading": "Browse our latest products",
-            "heading_size": "h1"
-          }
-        }
-      },
-      "block_order": [
-        "heading"
-      ],
-      "disabled": true,
-      "settings": {
-        "desktop_content_position": "center",
-        "content_alignment": "center",
-        "color_scheme": "scheme-1",
-        "full_width": true,
-        "padding_top": 28,
-        "padding_bottom": 12
+        "show_text_below": false
       }
     },
     "featured-collection": {
@@ -89,7 +65,7 @@
         "products_to_show": 4,
         "title": "New Arrivals",
         "heading_size": "h0",
-        "description": "<p>Shirts and dresses in statement prints and a fresh color palette for spring.</p>",
+        "description": "<p>Shirts and dresses in statement prints and a fresh color palette for spring</p>",
         "show_description": false,
         "description_style": "body",
         "columns_desktop": 4,
@@ -101,13 +77,51 @@
         "image_ratio": "portrait",
         "image_shape": "default",
         "show_secondary_image": true,
-        "show_vendor": false,
-        "show_rating": false,
+        "show_vendor": true,
+        "show_rating": true,
         "quick_add": "none",
-        "columns_mobile": "2",
-        "swipe_on_mobile": false,
+        "columns_mobile": "1",
+        "swipe_on_mobile": true,
         "padding_top": 40,
-        "padding_bottom": 68
+        "padding_bottom": 20
+      }
+    },
+    "split_banner_YdyYHh": {
+      "type": "split-banner",
+      "blocks": {
+        "banner_CftMcE": {
+          "type": "banner",
+          "settings": {
+            "image": "shopify://shop_images/471881154_1816839415792853_410744361890789845_n.png",
+            "heading": "The EscapeCollection",
+            "button_label": "Shop the collection",
+            "button_link": "shopify://collections/frontpage",
+            "button_style_secondary": true,
+            "overlay_opacity": 0,
+            "color_scheme": "scheme-4"
+          }
+        },
+        "banner_nLyGPr": {
+          "type": "banner",
+          "settings": {
+            "image": "shopify://shop_images/il_1588xN.6859470035_q823.png",
+            "heading": "The EscapeCollection",
+            "button_label": "Shop the collection",
+            "button_link": "#",
+            "button_style_secondary": false,
+            "overlay_opacity": 0,
+            "color_scheme": "scheme-4"
+          }
+        }
+      },
+      "block_order": [
+        "banner_CftMcE",
+        "banner_nLyGPr"
+      ],
+      "name": "t:sections.split-banner.presets.name",
+      "settings": {
+        "image_height": "medium",
+        "desktop_content_position": "top-left"
       }
     },
     "collection_list_QCrda8": {
@@ -147,40 +161,8 @@
         "show_view_all": false,
         "columns_mobile": "1",
         "swipe_on_mobile": false,
-        "padding_top": 36,
-        "padding_bottom": 36
-      }
-    },
-    "collage-0": {
-      "type": "collage",
-      "blocks": {
-        "collection-0": {
-          "type": "collection",
-          "settings": {
-            "collection": "frontpage"
-          }
-        },
-        "collection-1": {
-          "type": "collection",
-          "settings": {
-            "collection": "frontpage"
-          }
-        }
-      },
-      "block_order": [
-        "collection-0",
-        "collection-1"
-      ],
-      "disabled": true,
-      "settings": {
-        "heading": "",
-        "heading_size": "h2",
-        "desktop_layout": "right",
-        "mobile_layout": "collage",
-        "card_styles": "product-card-wrapper",
-        "color_scheme": "scheme-1",
-        "padding_top": 36,
-        "padding_bottom": 0
+        "padding_top": 20,
+        "padding_bottom": 20
       }
     },
     "image_banner_6ezqnQ": {
@@ -205,7 +187,7 @@
           "settings": {
             "button_label_1": "Shop the collection",
             "button_link_1": "shopify://products/example-hat",
-            "button_style_secondary_1": false,
+            "button_style_secondary_1": true,
             "button_label_2": "",
             "button_link_2": "",
             "button_style_secondary_2": false
@@ -219,10 +201,10 @@
       ],
       "name": "t:sections.image-banner.presets.name",
       "settings": {
-        "image": "{{ metaobjects.home_hero_banner[\"introducing-may-collection\"].image.value }}",
+        "image": "shopify://shop_images/471881154_1816839415792853_410744361890789845_n.png",
         "image_overlay_opacity": 0,
         "image_height": "medium",
-        "image_behavior": "none",
+        "image_behavior": "fixed",
         "desktop_content_position": "middle-center",
         "desktop_content_alignment": "center",
         "show_text_box": false,
@@ -292,10 +274,9 @@
   },
   "order": [
     "image_banner_PPqqd8",
-    "rich_text",
     "featured-collection",
+    "split_banner_YdyYHh",
     "collection_list_QCrda8",
-    "collage-0",
     "image_banner_6ezqnQ",
     "multicolumn_zG6tU8"
   ]

@@ -1,3 +1,12 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin language editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "settings_schema": {
     "global": {
@@ -3395,6 +3404,63 @@
       },
       "presets": {
         "name": "Collapsible content"
+      }
+    },
+    "split-banner": {
+      "name": "Split Banner",
+      "settings": {
+        "image_height": {
+          "label": "Image height",
+          "options__1": {
+            "label": "Adapt to image"
+          },
+          "options__2": {
+            "label": "Small"
+          },
+          "options__3": {
+            "label": "Medium"
+          },
+          "options__4": {
+            "label": "Large"
+          }
+        },
+        "desktop_content_position": {
+          "label": "Desktop content position",
+          "options__1": {
+            "label": "Top left"
+          },
+          "options__2": {
+            "label": "Bottom left"
+          }
+        }
+      },
+      "blocks": {
+        "banner": {
+          "name": "Banner Block",
+          "settings": {
+            "image": {
+              "label": "Image"
+            },
+            "heading": {
+              "label": "Heading"
+            },
+            "button_label": {
+              "label": "Button label"
+            },
+            "button_link": {
+              "label": "Button link"
+            },
+            "button_style_secondary": {
+              "label": "Outline style"
+            },
+            "overlay_opacity": {
+              "label": "Overlay opacity"
+            }
+          }
+        }
+      },
+      "presets": {
+        "name": "Split Banner"
       }
     }
   }

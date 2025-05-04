@@ -1,0 +1,208 @@
+{{ 'section-split-banner.css' | asset_url | stylesheet_tag }}
+
+{%- if section.blocks.size > 0 -%}
+  {%- assign first_block = section.blocks.first -%}
+  {%- assign first_image = first_block.settings.image -%}
+  {%- assign banner_adapt = false -%}
+
+  {%- if section.settings.image_height == 'adapt' and first_image -%}
+    {%- assign banner_adapt = true -%}
+    {%- style -%}
+      #SplitBanner-{{ section.id }} {
+        aspect-ratio: {{ first_image.aspect_ratio }};
+      }
+    {%- endstyle -%}
+  {%- endif -%}
+{%- endif -%}
+
+<section class="split-banner" id="SplitBanner-{{ section.id }}">
+  {%- for block in section.blocks -%}
+    <div
+      class="split-banner__item split-banner__item--{{ forloop.index }} content-container color-{{ block.settings.color_scheme }}"
+      {{ block.shopify_attributes }}
+    >
+      {%- if block.settings.image != blank -%}
+        <div class="split-banner__media-container media{% if section.settings.image_height == 'adapt' %} media--transparent{% endif %} split-banner__media--{{ section.settings.image_height }}{% if banner_adapt %} banner--adapt{% endif %}">
+          {%- if section.settings.image_height == 'adapt' -%}
+            {{
+              block.settings.image
+              | image_url: width: 1500
+              | image_tag:
+                loading: 'lazy',
+                class: 'split-banner__media deferred-media',
+                sizes: '(min-width: 750px) 50vw, 100vw',
+                widths: '375, 550, 750, 1100, 1500, 1780'
+            }}
+          {%- else -%}
+            <div class="split-banner__media media media--{{ section.settings.image_height }}">
+              {{
+                block.settings.image
+                | image_url: width: 1500
+                | image_tag:
+                  loading: 'lazy',
+                  sizes: '(min-width: 750px) 50vw, 100vw',
+                  widths: '375, 550, 750, 1100, 1500, 1780'
+              }}
+            </div>
+          {%- endif -%}
+          {%- if block.settings.overlay_opacity > 0 -%}
+            <div
+              class="split-banner__overlay gradient"
+              style="opacity: {{ block.settings.overlay_opacity | divided_by: 100.0 }};"
+            ></div>
+          {%- endif -%}
+        </div>
+      {%- else -%}
+        <div class="split-banner__media-container split-banner__media--placeholder placeholder">
+          {{ 'lifestyle-2' | placeholder_svg_tag: 'placeholder-svg' }}
+        </div>
+      {%- endif -%}
+
+      <div class="split-banner__content-container content-container">
+        <div
+          class="split-banner__content color-{{ section.settings.color_scheme }} gradient{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
+          style="--content-position: {{ section.settings.desktop_content_position }};"
+        >
+          {%- if block.settings.heading != blank -%}
+            <h2 class="split-banner__heading h1 {{ section.settings.heading_size }}" {{ block.shopify_attributes }}>
+              {{ block.settings.heading | escape }}
+            </h2>
+          {%- endif -%}
+          {%- if block.settings.button_label != blank -%}
+            <div class="button-group">
+              <a
+                href="{{ block.settings.button_link }}"
+                class="button{% if block.settings.button_style_secondary %} button--secondary{% else %} button--primary{% endif %}"
+                {% if block.settings.button_link == blank %}
+                  aria-disabled="true"
+                {% endif %}
+                {{ block.shopify_attributes }}
+              >
+                {{ block.settings.button_label | escape }}
+              </a>
+            </div>
+          {%- endif -%}
+        </div>
+      </div>
+    </div>
+  {%- endfor -%}
+</section>
+
+{% schema %}
+{
+  "name": "t:sections.split-banner.name",
+  "tag": "section",
+  "class": "section",
+  "disabled_on": {
+    "groups": ["header", "footer"]
+  },
+  "max_blocks": 2,
+  "settings": [
+    {
+      "type": "select",
+      "id": "image_height",
+      "options": [
+        {
+          "value": "adapt",
+          "label": "t:sections.split-banner.settings.image_height.options__1.label"
+        },
+        {
+          "value": "small",
+          "label": "t:sections.split-banner.settings.image_height.options__2.label"
+        },
+        {
+          "value": "medium",
+          "label": "t:sections.split-banner.settings.image_height.options__3.label"
+        },
+        {
+          "value": "large",
+          "label": "t:sections.split-banner.settings.image_height.options__4.label"
+        }
+      ],
+      "default": "medium",
+      "label": "t:sections.split-banner.settings.image_height.label"
+    },
+    {
+      "type": "select",
+      "id": "desktop_content_position",
+      "options": [
+        {
+          "value": "top-left",
+          "label": "t:sections.split-banner.settings.desktop_content_position.options__1.label"
+        },
+        {
+          "value": "bottom-left",
+          "label": "t:sections.split-banner.settings.desktop_content_position.options__2.label"
+        }
+      ],
+      "default": "bottom-left",
+      "label": "t:sections.split-banner.settings.desktop_content_position.label"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "banner",
+      "name": "t:sections.split-banner.blocks.banner.name",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "t:sections.split-banner.blocks.banner.settings.image.label"
+        },
+        {
+          "type": "text",
+          "id": "heading",
+          "default": "Split banner",
+          "label": "t:sections.split-banner.blocks.banner.settings.heading.label"
+        },
+        {
+          "type": "text",
+          "id": "button_label",
+          "default": "Button label",
+          "label": "t:sections.split-banner.blocks.banner.settings.button_label.label"
+        },
+        {
+          "type": "url",
+          "id": "button_link",
+          "label": "t:sections.split-banner.blocks.banner.settings.button_link.label"
+        },
+        {
+          "type": "checkbox",
+          "id": "button_style_secondary",
+          "default": false,
+          "label": "t:sections.split-banner.blocks.banner.settings.button_style_secondary.label"
+        },
+        {
+          "type": "range",
+          "id": "overlay_opacity",
+          "min": 0,
+          "max": 100,
+          "step": 10,
+          "unit": "%",
+          "label": "t:sections.split-banner.blocks.banner.settings.overlay_opacity.label",
+          "default": 0
+        },
+        {
+          "type": "color_scheme",
+          "id": "color_scheme",
+          "label": "t:sections.all.colors.label",
+          "default": "scheme-4"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "t:sections.split-banner.presets.name",
+      "blocks": [
+        {
+          "type": "banner"
+        },
+        {
+          "type": "banner"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

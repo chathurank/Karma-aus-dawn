@@ -1,0 +1,45 @@
+.product-card-wrapper {
+    .product-card__information {
+        display: grid;
+        gap: 0.5rem;
+        grid-template-columns: 1fr auto;
+        padding: 0;
+      }
+
+    .card--card.card--media > .card__content {
+        margin-top: 0.8rem;
+        padding: 0;
+      }
+
+      .card__vendor-info {
+        font-size: 1.3rem;
+      }
+
+      .card__heading {
+        font-family: var(--font-body-family);
+        font-size: 1.5rem;
+        line-height: 2rem;
+        text-transform: uppercase;
+      }
+
+      .price--on-sale .price-item--regular {
+        color: rgba(var(--color-foreground), 0.5);
+        margin-right: 0.5rem;
+      }
+
+      .price {
+        line-height: 2rem;
+      }
+
+      .price-item--sale, .price-item--regular {
+        font-weight: 500;
+      }
+  }
+
+ 
+
+  @media screen and (min-width: 750px) {
+    .product-card-wrapper .card__information {
+      padding: 0;
+    }
+  }
