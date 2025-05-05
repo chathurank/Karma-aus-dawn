@@ -1,0 +1,24 @@
+.footer-image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 6rem;
+  padding-bottom: 4rem;
+}
+
+.footer-image__link {
+  max-width: 16rem;
+}
+
+.footer-image__link {
+  display: block;
+  width: 100%;
+  text-align: center;
+}
+
+.footer-image__image {
+  display: block;
+  margin: 0 auto;
+  max-width: 100%;
+  height: auto;
+}

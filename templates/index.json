@@ -178,7 +178,7 @@
         "text_8tDXn6": {
           "type": "text",
           "settings": {
-            "text": "Shirts and dresses in statement prints and a fresh color palette for spring.",
+            "text": "Shirts and dresses in statement prints and a fresh color palette for spring.",
             "text_style": "body"
           }
         },
@@ -214,61 +214,43 @@
         "show_text_below": true
       }
     },
-    "multicolumn_zG6tU8": {
-      "type": "multicolumn",
+    "section_featured_values_7fzJQg": {
+      "type": "section-featured-values",
       "blocks": {
-        "column_Gp9EAX": {
-          "type": "column",
-          "settings": {
-            "image": "shopify://shop_images/model-in-sunglasses-and-summer-clothes.jpg",
-            "title": "Column",
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
-            "link_label": "",
-            "link": ""
-          }
-        },
-        "column_bKmwAH": {
-          "type": "column",
-          "settings": {
-            "image": "shopify://shop_images/fashion-model-in-pink.jpg",
-            "title": "Column",
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
-            "link_label": "",
-            "link": ""
-          }
-        },
-        "column_jywrQY": {
-          "type": "column",
+        "value_CK9yaA": {
+          "type": "value",
           "settings": {
             "image": "shopify://shop_images/a-model-in-khakis-holding-orchids.jpg",
-            "title": "Column",
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
-            "link_label": "",
-            "link": ""
+            "heading": "Value Heading",
+            "text": "<p>Consectetur culpa mollit magna ipsum duis officia. Nulla veniam ut id voluptate excepteur nisi qui enim sint anim ut aliqua.<br/><br/>Eiusmod consequat id enim irure excepteur id. Voluptate irure incididunt adipisicing dolor cillum sint mollit ullamco est. Irure exercitation occaecat eu veniam irure anim sint adipisicing. Est anim laboris sit minim voluptate nostrud est.</p>"
+          }
+        },
+        "value_qM3Xky": {
+          "type": "value",
+          "settings": {
+            "image": "shopify://shop_images/model-in-sunglasses-and-summer-clothes.jpg",
+            "heading": "Value Heading",
+            "text": "<p>Share information about this value</p>"
+          }
+        },
+        "value_xPNVWi": {
+          "type": "value",
+          "settings": {
+            "image": "shopify://shop_images/fashion-model-in-pink.jpg",
+            "heading": "Value Heading",
+            "text": "<p>Share information about this value</p>"
           }
         }
       },
       "block_order": [
-        "column_Gp9EAX",
-        "column_bKmwAH",
-        "column_jywrQY"
+        "value_CK9yaA",
+        "value_qM3Xky",
+        "value_xPNVWi"
       ],
-      "name": "t:sections.multicolumn.presets.name",
+      "name": "Featured Values",
       "settings": {
-        "title": "Karma Values",
-        "heading_size": "h0",
-        "image_width": "full",
-        "image_ratio": "square",
-        "button_label": "",
-        "button_link": "",
-        "columns_desktop": 3,
-        "column_alignment": "left",
-        "background_style": "none",
-        "color_scheme": "",
-        "columns_mobile": "1",
-        "swipe_on_mobile": false,
-        "padding_top": 36,
-        "padding_bottom": 36
+        "title": "Our Values",
+        "color_scheme": ""
       }
     }
   },
@@ -278,6 +260,6 @@
     "split_banner_YdyYHh",
     "collection_list_QCrda8",
     "image_banner_6ezqnQ",
-    "multicolumn_zG6tU8"
+    "section_featured_values_7fzJQg"
   ]
 }

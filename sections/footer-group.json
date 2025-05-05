@@ -11,6 +11,15 @@
   "name": "t:sections.footer.name",
   "type": "footer",
   "sections": {
+    "section_footer_image_fkJiNa": {
+      "type": "section-footer-image",
+      "name": "t:sections.footer-image.name",
+      "settings": {
+        "image": "shopify://shop_images/logo-full.svg",
+        "image_link": "shopify://pages/contact",
+        "color_scheme": "scheme-2"
+      }
+    },
     "newsletter": {
       "type": "newsletter",
       "blocks": {
@@ -63,6 +72,7 @@
     }
   },
   "order": [
+    "section_footer_image_fkJiNa",
     "newsletter",
     "footer"
   ]

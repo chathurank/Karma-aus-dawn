@@ -1,0 +1,51 @@
+{{ 'section-footer-image.css' | asset_url | stylesheet_tag }}
+
+<div class="footer-image color-scheme-{{ section.settings.color_scheme }}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %} content-container color-{{ section.settings.color_scheme }} gradient content-container--full-width">
+  {%- if section.settings.image != blank -%}
+    <a href="{{ section.settings.image_link }}" class="footer-image__link">
+      {{
+        section.settings.image
+        | image_url: width: 2000
+        | image_tag:
+          loading: 'lazy',
+          class: 'footer-image__image',
+          widths: '375, 550, 750, 1100, 1500, 1780, 2000',
+          sizes: '100vw'
+      }}
+    </a>
+  {%- endif -%}
+</div>
+
+{% schema %}
+{
+  "name": "Footer Image",
+  "tag": "section",
+  "class": "section",
+  "disabled_on": {
+    "groups": ["header"]
+  },
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "image",
+      "label": "Image"
+    },
+    {
+      "type": "url",
+      "id": "image_link",
+      "label": "Image link"
+    },
+    {
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "label": "t:sections.all.colors.label",
+      "default": "scheme-1"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Logo"
+    }
+  ]
+}
+{% endschema %}
