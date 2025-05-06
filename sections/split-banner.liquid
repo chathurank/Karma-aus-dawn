@@ -34,16 +34,14 @@
                 widths: '375, 550, 750, 1100, 1500, 1780'
             }}
           {%- else -%}
-            <div class="split-banner__media media media--{{ section.settings.image_height }}">
-              {{
-                block.settings.image
-                | image_url: width: 1500
-                | image_tag:
-                  loading: 'lazy',
-                  sizes: '(min-width: 750px) 50vw, 100vw',
-                  widths: '375, 550, 750, 1100, 1500, 1780'
-              }}
-            </div>
+            {{
+              block.settings.image
+              | image_url: width: 1500
+              | image_tag:
+                loading: 'lazy',
+                sizes: '(min-width: 750px) 50vw, 100vw',
+                widths: '375, 550, 750, 1100, 1500, 1780'
+            }}
           {%- endif -%}
           {%- if block.settings.overlay_opacity > 0 -%}
             <div

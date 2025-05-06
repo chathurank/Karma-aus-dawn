@@ -11,18 +11,26 @@
   "name": "t:sections.footer.name",
   "type": "footer",
   "sections": {
-    "section_footer_image_fkJiNa": {
-      "type": "section-footer-image",
-      "name": "t:sections.footer-image.name",
+    "footer_logo_yUdnt3": {
+      "type": "footer-logo",
+      "name": "Logo",
       "settings": {
         "image": "shopify://shop_images/logo-full.svg",
-        "image_link": "shopify://pages/contact",
-        "color_scheme": "scheme-2"
+        "image_link": "",
+        "color_scheme": ""
       }
     },
     "newsletter": {
       "type": "newsletter",
       "blocks": {
+        "content_MB4D3d": {
+          "type": "content",
+          "settings": {
+            "heading": "Our Vision",
+            "heading_size": "h1",
+            "text": "<p>At Karma Collection Australia, we believe fashion is more than just what you wear. Its a reflection of your soul, your values and the energy you bring into the world.We are not just a brand, we are a movement that celebrates individuality, sustainability and the timeless beauty of mindful craftmanship. Every piece we create is a journey, karma australia blending island spirit with the timeless grace of nature</p>"
+          }
+        },
         "heading": {
           "type": "heading",
           "settings": {
@@ -42,6 +50,7 @@
         }
       },
       "block_order": [
+        "content_MB4D3d",
         "heading",
         "paragraph",
         "email_form"
@@ -56,13 +65,13 @@
     "footer": {
       "type": "footer",
       "settings": {
-        "color_scheme": "scheme-4",
+        "color_scheme": "scheme-2",
         "newsletter_enable": false,
         "newsletter_heading": "Subscribe to our emails",
         "enable_follow_on_shop": true,
         "show_social": true,
-        "enable_country_selector": true,
-        "enable_language_selector": true,
+        "enable_country_selector": false,
+        "enable_language_selector": false,
         "payment_enable": true,
         "show_policy": true,
         "margin_top": 0,
@@ -72,7 +81,7 @@
     }
   },
   "order": [
-    "section_footer_image_fkJiNa",
+    "footer_logo_yUdnt3",
     "newsletter",
     "footer"
   ]
