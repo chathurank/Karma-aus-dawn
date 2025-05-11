@@ -105,8 +105,8 @@
     "drawer_shadow_blur": 5,
     "badge_position": "bottom left",
     "badge_corner_radius": 2,
-    "sale_badge_color_scheme": "scheme-5",
-    "sold_out_badge_color_scheme": "scheme-4",
+    "sale_badge_color_scheme": "scheme-d7bd89ac-dabf-4dc2-93eb-a50c54401309",
+    "sold_out_badge_color_scheme": "scheme-9cf26859-d8f0-4c07-8909-bd717ace041c",
     "brand_headline": "",
     "brand_description": "",
     "brand_image_width": 100,
@@ -208,6 +208,17 @@
           "button_label": "{{ shop.brand.colors.secondary[0].background }}",
           "secondary_button_label": "{{ shop.brand.colors.primary[0].foreground }}",
           "shadow": "{{ shop.brand.colors.secondary[0].background }}"
+        }
+      },
+      "scheme-d7bd89ac-dabf-4dc2-93eb-a50c54401309": {
+        "settings": {
+          "background": "#dc6b0f",
+          "background_gradient": "",
+          "text": "{{ shop.brand.colors.primary[0].foreground }}",
+          "button": "{{ shop.brand.colors.primary[0].foreground }}",
+          "button_label": "{{ shop.brand.colors.primary[0].background }}",
+          "secondary_button_label": "{{ shop.brand.colors.primary[0].foreground }}",
+          "shadow": "#dc6b0f"
         }
       }
     }

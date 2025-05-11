@@ -249,6 +249,12 @@ a.product__text {
   word-break: break-word;
   margin-top: 0;
   margin-bottom: 1.5rem;
+
+  h1 {
+    font-size: 3.2rem;
+    line-height: 1.2;
+    /* line-height: calc(1 + 0.5 / var(--font-body-scale)); */
+  }
 }
 
 .product__title > * {
@@ -269,6 +275,15 @@ a.product__text {
 
 .product__accordion .accordion__content {
   padding: 0 1rem;
+}
+
+.product_price-shipping--container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 100%;
+  gap: 0.5rem;
+  justify-content: space-between;
 }
 
 .product .price .badge {

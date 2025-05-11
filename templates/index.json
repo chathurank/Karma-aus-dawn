@@ -30,7 +30,7 @@
           "type": "buttons",
           "settings": {
             "button_label_1": "Shop the collection",
-            "button_link_1": "shopify://products/example-hat",
+            "button_link_1": "shopify://products/ikat-maxi-dress",
             "button_style_secondary_1": false,
             "button_label_2": "",
             "button_link_2": "",
@@ -96,7 +96,7 @@
             "heading": "The EscapeCollection",
             "button_label": "Shop the collection",
             "button_link": "shopify://collections/frontpage",
-            "button_style_secondary": true,
+            "button_style_secondary": false,
             "overlay_opacity": 0,
             "color_scheme": "scheme-4"
           }
@@ -186,8 +186,8 @@
           "type": "buttons",
           "settings": {
             "button_label_1": "Shop the collection",
-            "button_link_1": "shopify://products/example-hat",
-            "button_style_secondary_1": true,
+            "button_link_1": "shopify://products/ikat-maxi-dress",
+            "button_style_secondary_1": false,
             "button_label_2": "",
             "button_link_2": "",
             "button_style_secondary_2": false
@@ -214,38 +214,38 @@
         "show_text_below": true
       }
     },
-    "section_featured_values_7fzJQg": {
-      "type": "section-featured-values",
+    "featured_values_GBTNJ3": {
+      "type": "featured-values",
       "blocks": {
-        "value_CK9yaA": {
+        "value_9FGKbk": {
           "type": "value",
           "settings": {
-            "image": "shopify://shop_images/a-model-in-khakis-holding-orchids.jpg",
-            "heading": "Value Heading",
-            "text": "<p>Consectetur culpa mollit magna ipsum duis officia. Nulla veniam ut id voluptate excepteur nisi qui enim sint anim ut aliqua.<br/><br/>Eiusmod consequat id enim irure excepteur id. Voluptate irure incididunt adipisicing dolor cillum sint mollit ullamco est. Irure exercitation occaecat eu veniam irure anim sint adipisicing. Est anim laboris sit minim voluptate nostrud est.</p>"
+            "image": "shopify://shop_images/fashion-portrait.jpg",
+            "heading": "Responsible Design",
+            "text": "<p>Meticulously designed with integrity and expertly crafted to withstand the rigors of everyday use, ensuring both durability and style.</p>"
           }
         },
-        "value_qM3Xky": {
+        "value_YnKmb6": {
           "type": "value",
           "settings": {
-            "image": "shopify://shop_images/model-in-sunglasses-and-summer-clothes.jpg",
-            "heading": "Value Heading",
-            "text": "<p>Share information about this value</p>"
+            "image": "shopify://shop_images/shopping-gift-wrap.jpg",
+            "heading": "Responsible Design",
+            "text": "<p>Meticulously designed with integrity and expertly crafted to withstand the rigors of everyday use, ensuring both durability and style.</p>"
           }
         },
-        "value_xPNVWi": {
+        "value_mKD8RJ": {
           "type": "value",
           "settings": {
-            "image": "shopify://shop_images/fashion-model-in-pink.jpg",
-            "heading": "Value Heading",
-            "text": "<p>Share information about this value</p>"
+            "image": "shopify://shop_images/baby-girls-hand-on-dads-hand.jpg",
+            "heading": "Responsible Design",
+            "text": "<p>Meticulously designed with integrity and expertly crafted to withstand the rigors of everyday use, ensuring both durability and style.</p>"
           }
         }
       },
       "block_order": [
-        "value_CK9yaA",
-        "value_qM3Xky",
-        "value_xPNVWi"
+        "value_9FGKbk",
+        "value_YnKmb6",
+        "value_mKD8RJ"
       ],
       "name": "Featured Values",
       "settings": {
@@ -260,6 +260,6 @@
     "split_banner_YdyYHh",
     "collection_list_QCrda8",
     "image_banner_6ezqnQ",
-    "section_featured_values_7fzJQg"
+    "featured_values_GBTNJ3"
   ]
 }
