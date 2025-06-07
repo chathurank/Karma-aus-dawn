@@ -47,9 +47,9 @@
       "settings": {
         "image": "{{ metaobjects.home_hero_banner[\"introducing-may-collection\"].image.value }}",
         "image_overlay_opacity": 0,
-        "image_height": "medium",
+        "image_height": "large",
         "image_behavior": "zoom-in",
-        "desktop_content_position": "middle-center",
+        "desktop_content_position": "bottom-center",
         "desktop_content_alignment": "center",
         "show_text_box": false,
         "color_scheme": "scheme-4",
@@ -77,8 +77,8 @@
         "image_ratio": "portrait",
         "image_shape": "default",
         "show_secondary_image": true,
-        "show_vendor": true,
-        "show_rating": true,
+        "show_vendor": false,
+        "show_rating": false,
         "quick_add": "none",
         "columns_mobile": "1",
         "swipe_on_mobile": true,
@@ -130,19 +130,19 @@
         "featured_collection_JpdBNA": {
           "type": "featured_collection",
           "settings": {
-            "collection": "frontpage"
+            "collection": "women"
           }
         },
         "featured_collection_UwXyk4": {
           "type": "featured_collection",
           "settings": {
-            "collection": "frontpage"
+            "collection": "women"
           }
         },
         "featured_collection_LUCMnk": {
           "type": "featured_collection",
           "settings": {
-            "collection": "frontpage"
+            "collection": "women"
           }
         }
       },
@@ -203,9 +203,9 @@
       "settings": {
         "image": "shopify://shop_images/471881154_1816839415792853_410744361890789845_n.png",
         "image_overlay_opacity": 0,
-        "image_height": "medium",
+        "image_height": "large",
         "image_behavior": "fixed",
-        "desktop_content_position": "middle-center",
+        "desktop_content_position": "bottom-center",
         "desktop_content_alignment": "center",
         "show_text_box": false,
         "color_scheme": "scheme-4",

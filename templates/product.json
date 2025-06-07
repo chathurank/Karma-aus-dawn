@@ -31,7 +31,7 @@
           "type": "variant_picker",
           "settings": {
             "picker_type": "button",
-            "swatch_shape": "circle"
+            "swatch_shape": "square"
           }
         },
         "quantity_selector": {
@@ -48,21 +48,22 @@
         "collapsible_tab_QrAJQU": {
           "type": "collapsible_tab",
           "settings": {
-            "heading": "Collapsible row",
-            "icon": "price_tag",
-            "content": "<p>Test</p>",
+            "heading": "Details",
+            "content": "{{ product.description }}",
             "page": ""
           }
         },
-        "popup_gq8T3g": {
-          "type": "popup",
+        "collapsible_tab_hm3qEH": {
+          "type": "collapsible_tab",
           "settings": {
-            "text": "Pop-up link text",
-            "page": "contact"
+            "heading": "Care guide",
+            "content": "<p>{{ product.metafields.descriptors.care_guide | metafield_tag }}</p>",
+            "page": ""
           }
         },
         "description": {
           "type": "description",
+          "disabled": true,
           "settings": {}
         },
         "share": {
@@ -80,7 +81,7 @@
         "quantity_selector",
         "buy_buttons",
         "collapsible_tab_QrAJQU",
-        "popup_gq8T3g",
+        "collapsible_tab_hm3qEH",
         "description",
         "share"
       ],

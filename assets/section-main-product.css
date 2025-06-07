@@ -172,13 +172,14 @@ product-info {
   flex: 0 0 100%;
   padding: 0;
   margin: 0 0 1.2rem 0;
-  max-width: 44rem;
+  /* max-width: 44rem; */
   min-width: fit-content;
   border: none;
 }
 
 .product-form__input .form__label {
   padding-left: 0;
+  font-size: 1.4rem;
 }
 
 .product-form__input .select {
@@ -213,6 +214,7 @@ product-info {
 .shopify-payment-button__button {
   font-size: 1.5rem;
   letter-spacing: 0.1rem;
+  text-transform: uppercase;
 }
 
 /* Product info */
@@ -277,13 +279,19 @@ a.product__text {
   padding: 0 1rem;
 }
 
-.product_price-shipping--container {
+.product_price-shipping--container,
+.product-form__size-variant--wrapper {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   width: 100%;
   gap: 0.5rem;
   justify-content: space-between;
+}
+
+.size-guide-button {
+  font-size: 1.3rem;
+  text-transform: uppercase;
 }
 
 .product .price .badge {

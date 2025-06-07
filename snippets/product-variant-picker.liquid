@@ -26,12 +26,17 @@
             assign picker_type = 'swatch'
           endif
         endif
+        if option.name == 'Color'
+          assign patterns = product.metafields.shopify['color-pattern'].value
+          assign picker_type = 'swatch'
+        endif
       -%}
+
       {%- if picker_type == 'swatch' -%}
         <fieldset class="js product-form__input product-form__input--swatch">
           <legend class="form__label">
             {{ option.name }}:
-            <span data-selected-value>
+            <span data-selected-value class="swatch__selected-value">
               {{- option.selected_value -}}
             </span>
           </legend>
@@ -39,19 +44,37 @@
             product: product,
             option: option,
             block: block,
-            picker_type: picker_type
+            picker_type: picker_type,
+            patterns: patterns
           %}
         </fieldset>
       {%- elsif picker_type == 'button' -%}
-        <fieldset class="js product-form__input product-form__input--pill">
-          <legend class="form__label">{{ option.name }}</legend>
-          {% render 'product-variant-options',
-            product: product,
-            option: option,
-            block: block,
-            picker_type: picker_type
-          %}
-        </fieldset>
+        {%- if option.name == 'Size' -%}
+          <fieldset class="js product-form__input product-form__input--pill">
+            <legend class="form__label">{{ option.name }}</legend>
+            <div class="product-form__size-variant--wrapper">
+              <div>
+                {% render 'product-variant-options',
+                  product: product,
+                  option: option,
+                  block: block,
+                  picker_type: picker_type
+                %}
+              </div>
+              {% render 'size-guide-button' %}
+            </div>
+          </fieldset>
+        {%- else -%}
+          <fieldset class="js product-form__input product-form__input--pill">
+            <legend class="form__label">{{ option.name }}</legend>
+            {% render 'product-variant-options',
+              product: product,
+              option: option,
+              block: block,
+              picker_type: picker_type
+            %}
+          </fieldset>
+        {%- endif -%}
       {%- else -%}
         <div class="product-form__input product-form__input--dropdown">
           <label class="form__label" for="Option-{{ section.id }}-{{ forloop.index0 }}">

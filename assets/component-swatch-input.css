@@ -18,6 +18,10 @@
   --swatch-input--border-radius: 0.2rem;
 }
 
+.swatch__selected-value {
+  font-weight: 500;
+}
+
 /* Active state */
 .swatch-input__input:active + .swatch-input__label,
 .swatch-input__input:checked + .swatch-input__label {
@@ -84,4 +88,14 @@
   background-color: rgb(var(--color-foreground));
   transform: rotate(-45deg);
   transform-origin: left;
+}
+
+.swatch-input__label--image {
+  padding: 0 !important;
+  margin-right: 1rem !important;
+
+  .swatch--square {
+    --swatch--size: 5.4rem;
+    --swatch--border-radius: 0;
+  }
 }

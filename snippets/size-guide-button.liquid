@@ -1,0 +1,17 @@
+{%- assign size_guide_page = product.metafields.custom.size_guide.value -%}
+{%- if size_guide_page -%}
+  <modal-opener
+    class="product-popup-modal__opener"
+    data-modal="#SizeGuide-{{ section.id }}"
+  >
+    <button
+      id="ProductPopup-{{ section.id }}"
+      class="product-popup-modal__button link size-guide-button"
+      type="button"
+      aria-haspopup="dialog"
+    >
+      {% comment %} <span class="svg-wrapper">{{- 'icon-ruler.svg' | inline_asset_content -}}</span> {% endcomment %}
+      {{ 'products.product.size_guide' | t }}
+    </button>
+  </modal-opener>
+{%- endif -%}

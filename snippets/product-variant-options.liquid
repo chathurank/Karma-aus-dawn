@@ -16,13 +16,18 @@
     picker_type: picker_type
   %}
 {% endcomment %}
+
 {%- liquid
   assign product_form_id = 'product-form-' | append: section.id
 -%}
-
 {%- for value in option.values -%}
   {%- liquid
     assign swatch_focal_point = null
+    if patterns
+      assign pattern = patterns | where: 'label', value | first
+      assign pattern_image = pattern.image
+      assign bg_color = pattern.color.value | strip | remove: '"'
+    endif
     if value.swatch.image
       assign image_url = value.swatch.image | image_url: width: 50
       assign swatch_value = 'url(' | append: image_url | append: ')'
@@ -60,9 +65,9 @@
 
   {%- if picker_type == 'swatch' -%}
     {%- capture help_text -%}
-      <span class="visually-hidden">{{ value | escape }}</span>
-      {{ label_unavailable }}
-    {%- endcapture -%}
+        <span class="visually-hidden">{{ value | escape }}</span>
+        {{ label_unavailable }}
+      {%- endcapture -%}
     {%
       render 'swatch-input',
       id: input_id,
@@ -75,6 +80,8 @@
       shape: block.settings.swatch_shape,
       help_text: help_text,
       additional_props: input_dataset
+      image: pattern_image
+      bg_color: bg_color
     %}
   {%- elsif picker_type == 'button' -%}
     <input
