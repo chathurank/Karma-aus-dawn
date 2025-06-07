@@ -11,44 +11,14 @@
   "sections": {
     "image_banner_PPqqd8": {
       "type": "image-banner",
-      "blocks": {
-        "heading_iMWngJ": {
-          "type": "heading",
-          "settings": {
-            "heading": "Introducing May Collection",
-            "heading_size": "h0"
-          }
-        },
-        "text_WBJKXL": {
-          "type": "text",
-          "settings": {
-            "text": "Shirts and dresses in statement prints and a fresh color palette for spring",
-            "text_style": "body"
-          }
-        },
-        "buttons_RH6enh": {
-          "type": "buttons",
-          "settings": {
-            "button_label_1": "Shop the collection",
-            "button_link_1": "shopify://products/ikat-maxi-dress",
-            "button_style_secondary_1": false,
-            "button_label_2": "",
-            "button_link_2": "",
-            "button_style_secondary_2": false
-          }
-        }
-      },
-      "block_order": [
-        "heading_iMWngJ",
-        "text_WBJKXL",
-        "buttons_RH6enh"
-      ],
       "name": "t:sections.image-banner.presets.name",
       "settings": {
-        "image": "{{ metaobjects.home_hero_banner[\"introducing-may-collection\"].image.value }}",
         "image_overlay_opacity": 0,
         "image_height": "large",
         "image_behavior": "zoom-in",
+        "heading_size": "h1",
+        "text_style": "body",
+        "button_style_secondary": false,
         "desktop_content_position": "bottom-center",
         "desktop_content_alignment": "center",
         "show_text_box": false,
@@ -167,44 +137,14 @@
     },
     "image_banner_6ezqnQ": {
       "type": "image-banner",
-      "blocks": {
-        "heading_iyWMTn": {
-          "type": "heading",
-          "settings": {
-            "heading": "Introducing May Collection",
-            "heading_size": "h1"
-          }
-        },
-        "text_8tDXn6": {
-          "type": "text",
-          "settings": {
-            "text": "Shirts and dresses in statement prints and a fresh color palette for spring.",
-            "text_style": "body"
-          }
-        },
-        "buttons_EUXL9g": {
-          "type": "buttons",
-          "settings": {
-            "button_label_1": "Shop the collection",
-            "button_link_1": "shopify://products/ikat-maxi-dress",
-            "button_style_secondary_1": false,
-            "button_label_2": "",
-            "button_link_2": "",
-            "button_style_secondary_2": false
-          }
-        }
-      },
-      "block_order": [
-        "heading_iyWMTn",
-        "text_8tDXn6",
-        "buttons_EUXL9g"
-      ],
       "name": "t:sections.image-banner.presets.name",
       "settings": {
-        "image": "shopify://shop_images/471881154_1816839415792853_410744361890789845_n.png",
         "image_overlay_opacity": 0,
         "image_height": "large",
         "image_behavior": "fixed",
+        "heading_size": "h1",
+        "text_style": "body",
+        "button_style_secondary": false,
         "desktop_content_position": "bottom-center",
         "desktop_content_alignment": "center",
         "show_text_box": false,
