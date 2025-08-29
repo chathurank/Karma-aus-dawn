@@ -1,0 +1,29 @@
+{% layout 'theme' %}
+
+{%- style -%}
+  .soon-page-content {
+    text-align: center;
+  }
+  
+  .soon-page-content img {
+    width: 100%;
+    display: block;
+  }
+
+  .soon-page__content {
+    margin: 8rem 1rem;
+  }
+
+  .soon-page-content h2 {
+    font-size: 5rem;
+    margin-bottom: 1rem;
+  }
+
+  .soon-page-content p {
+    font-size: 2rem;
+  }
+{%- endstyle -%}
+
+<div class="soon-page-content">
+  {{ page.content }}
+</div>

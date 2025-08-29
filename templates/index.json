@@ -13,7 +13,8 @@
       "type": "image-banner",
       "name": "t:sections.image-banner.presets.name",
       "settings": {
-        "image_overlay_opacity": 0,
+        "banner_entry_name": "{{ metaobjects.home_hero_banner[\"introducing-may-collection\"].name.value }}",
+        "image_overlay_opacity": 40,
         "image_height": "large",
         "image_behavior": "zoom-in",
         "heading_size": "h1",
@@ -139,6 +140,7 @@
       "type": "image-banner",
       "name": "t:sections.image-banner.presets.name",
       "settings": {
+        "banner_entry_name": "",
         "image_overlay_opacity": 0,
         "image_height": "large",
         "image_behavior": "fixed",

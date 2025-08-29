@@ -2,16 +2,9 @@
 
 {% if shop.metaobjects.home_hero_banner %}
   {%- assign home_hero_banner = shop.metaobjects.home_hero_banner.values
-    | where: 'active', true
-    | sort: 'created_at'
+    | where: 'name', section.settings.banner_entry_name
     | first
   -%}
-
-  <script>
-    window.addEventListener('DOMContentLoaded', () => {
-      console.log('home_hero_banner:', {{ home_hero_banner.link }});
-    });
-  </script>
 
   {%- if section.settings.image_height == 'adapt' and home_hero_banner.image != blank -%}
     {%- style -%}
@@ -66,7 +59,7 @@
 
   <div
     id="Banner-{{ section.id }}"
-    class="banner banner--content-align-{{ section.settings.desktop_content_alignment }} banner--content-align-mobile-{{ section.settings.mobile_content_alignment }} banner--{{ section.settings.image_height }}{% if section.settings.stack_images_on_mobile and home_hero_banner.image != blank and home_hero_banner.image_2 != blank %} banner--stacked{% endif %}{% if section.settings.image_height == 'adapt' and home_hero_banner.image != blank %} banner--adapt{% endif %}{% if section.settings.show_text_below %} banner--mobile-bottom{%- endif -%}{% if section.settings.show_text_box == false %} banner--desktop-transparent{% endif %}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--fade-in{% endif %}"
+    class="banner banner--content-align-{{ section.settings.desktop_content_alignment }} banner--content-position-{{ section.settings.desktop_content_position }} banner--content-align-mobile-{{ section.settings.mobile_content_alignment }} banner--{{ section.settings.image_height }}{% if section.settings.stack_images_on_mobile and home_hero_banner.image != blank and home_hero_banner.image_2 != blank %} banner--stacked{% endif %}{% if section.settings.image_height == 'adapt' and home_hero_banner.image != blank %} banner--adapt{% endif %}{% if section.settings.show_text_below %} banner--mobile-bottom{%- endif -%}{% if section.settings.show_text_box == false %} banner--desktop-transparent{% endif %}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--fade-in{% endif %}"
   >
     {%- if home_hero_banner.image != blank -%}
       <div class="banner__media media{% if home_hero_banner.image == blank and home_hero_banner.image_2 == blank %} placeholder{% endif %}{% if home_hero_banner.image_2 != blank %} banner__media-half{% endif %}{% if section.settings.image_behavior != 'none' %} animate--{{ section.settings.image_behavior }}{% endif %}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--fade-in{% endif %}">
@@ -128,7 +121,6 @@
         }}
       </div>
     {%- endif -%}
-    <div class="banner__overlay"></div>
     <div class="banner__content banner__content--{{ section.settings.desktop_content_position }} page-width{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}">
       <div class="banner__box content-container content-container--full-width-mobile color-{{ section.settings.color_scheme }} gradient">
         <h2 class="banner__heading inline-richtext {{ section.settings.heading_size }}">
@@ -166,6 +158,12 @@
   },
   "settings": [
     {
+      "type": "text",
+      "id": "banner_entry_name",
+      "label": "Name of the Hero Banner",
+      "info": "Enter the exact name of the Hero Banner entry you want to display. This should match the name in the Metaobject."
+    },
+    {
       "type": "range",
       "id": "image_overlay_opacity",
       "min": 0,
@@ -173,7 +171,7 @@
       "step": 10,
       "unit": "%",
       "label": "t:sections.image-banner.settings.image_overlay_opacity.label",
-      "default": 0
+      "default": 30
     },
     {
       "type": "select",
