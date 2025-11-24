@@ -123,9 +123,9 @@
     {%- endif -%}
     <div class="banner__content banner__content--{{ section.settings.desktop_content_position }} page-width{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}">
       <div class="banner__box content-container content-container--full-width-mobile color-{{ section.settings.color_scheme }} gradient">
-        <h2 class="banner__heading inline-richtext {{ section.settings.heading_size }}">
+        <{{ section.settings.heading_tag }} class="banner__heading inline-richtext {{ section.settings.heading_size }}">
           {{ home_hero_banner.title }}
-        </h2>
+        </{{ section.settings.heading_tag }}>
         <div class="banner__text rte {{ section.settings.text_style }}">
           <p>{{ home_hero_banner.description }}</p>
         </div>
@@ -172,6 +172,10 @@
       "unit": "%",
       "label": "t:sections.image-banner.settings.image_overlay_opacity.label",
       "default": 30
+    },
+    {
+      "type": "header",
+      "content": "Image"
     },
     {
       "type": "select",
@@ -252,6 +256,26 @@
       ],
       "default": "h1",
       "label": "t:sections.all.heading_size.label"
+    },
+    {
+      "type": "select",
+      "id": "heading_tag",
+      "options": [
+        {
+          "value": "h1",
+          "label": "h1"
+        },
+        {
+          "value": "h2",
+          "label": "h2"
+        },
+        {
+          "value": "h3",
+          "label": "h3"
+        }
+      ],
+      "default": "h2",
+      "label": "Heading tag"
     },
     {
       "type": "select",

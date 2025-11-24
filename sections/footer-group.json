@@ -11,13 +11,30 @@
   "name": "t:sections.footer.name",
   "type": "footer",
   "sections": {
+    "176068998672cb049a": {
+      "type": "apps",
+      "blocks": {
+        "judge_me_reviews_featured_carousel_ajXjK4": {
+          "type": "shopify://apps/judge-me-reviews/blocks/featured_carousel/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
+          "settings": {
+            "maxwidth": 1080
+          }
+        }
+      },
+      "block_order": [
+        "judge_me_reviews_featured_carousel_ajXjK4"
+      ],
+      "settings": {
+        "include_margins": true
+      }
+    },
     "footer_logo_yUdnt3": {
       "type": "footer-logo",
       "name": "Logo",
       "settings": {
         "image": "shopify://shop_images/logo-full.svg",
         "image_link": "",
-        "color_scheme": ""
+        "color_scheme": "scheme-2"
       }
     },
     "newsletter": {
@@ -58,7 +75,7 @@
       "settings": {
         "color_scheme": "scheme-2",
         "full_width": true,
-        "padding_top": 36,
+        "padding_top": 16,
         "padding_bottom": 44
       }
     },
@@ -93,6 +110,7 @@
     }
   },
   "order": [
+    "176068998672cb049a",
     "footer_logo_yUdnt3",
     "newsletter",
     "footer"

@@ -14,22 +14,30 @@
     "announcement-bar": {
       "type": "announcement-bar",
       "blocks": {
-        "announcement-bar-0": {
+        "announcement_tnJqFT": {
           "type": "announcement",
           "settings": {
-            "text": "Welcome to our store",
-            "link": "shopify://collections"
+            "text": "<<< NOW PAY WITH AFTERPAY >>>",
+            "link": ""
+          }
+        },
+        "announcement_rw4QBh": {
+          "type": "announcement",
+          "settings": {
+            "text": "FREE SHIPPING ORDERS OVER $200",
+            "link": ""
           }
         }
       },
       "block_order": [
-        "announcement-bar-0"
+        "announcement_tnJqFT",
+        "announcement_rw4QBh"
       ],
       "settings": {
-        "auto_rotate": false,
-        "change_slides_speed": 5,
-        "color_scheme": "scheme-9cf26859-d8f0-4c07-8909-bd717ace041c",
-        "show_line_separator": true,
+        "auto_rotate": true,
+        "change_slides_speed": 4,
+        "color_scheme": "scheme-d7bd89ac-dabf-4dc2-93eb-a50c54401309",
+        "show_line_separator": false,
         "show_social": false,
         "enable_country_selector": false,
         "enable_language_selector": false
@@ -53,10 +61,17 @@
         "padding_top": 4,
         "padding_bottom": 4
       }
+    },
+    "1760689847aae6b366": {
+      "type": "apps",
+      "settings": {
+        "include_margins": true
+      }
     }
   },
   "order": [
     "announcement-bar",
-    "header"
+    "header",
+    "1760689847aae6b366"
   ]
 }

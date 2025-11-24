@@ -23,9 +23,39 @@
           "type": "title",
           "settings": {}
         },
+        "judge_me_reviews_preview_badge_gWVkjz": {
+          "type": "shopify://apps/judge-me-reviews/blocks/preview_badge/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
+          "settings": {}
+        },
         "price": {
           "type": "price",
           "settings": {}
+        },
+        "afterpay_on_site_messaging_payments_messaging_qqqwqP": {
+          "type": "shopify://apps/afterpay-on-site-messaging/blocks/payments-messaging/f45a5524-d177-4475-bf59-281efd2215a8",
+          "settings": {
+            "text_align": "inherit",
+            "margin_top": 16,
+            "margin_bottom": 16,
+            "color": "",
+            "size": "md",
+            "intro_text": "or",
+            "show_interest_free": true,
+            "payment_amount_is_bold": true,
+            "show_with": true,
+            "logo_type": "badge",
+            "logo_theme": "black-on-mint",
+            "modal_link_style": "circled-info-icon",
+            "modal_theme": "mint",
+            "breakpoint": 749,
+            "text_align_mobile": "inherit",
+            "margin_top_mobile": 16,
+            "margin_bottom_mobile": 16,
+            "show_lower_limit": true,
+            "show_upper_limit": true,
+            "show_if_outside_limits": true,
+            "product": "{{product}}"
+          }
         },
         "variant_picker": {
           "type": "variant_picker",
@@ -61,6 +91,13 @@
             "page": ""
           }
         },
+        "judge_me_reviews_review_widget_MymimR": {
+          "type": "shopify://apps/judge-me-reviews/blocks/review_widget/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
+          "settings": {
+            "review_data": "sample_data",
+            "max_width": 1200
+          }
+        },
         "description": {
           "type": "description",
           "disabled": true,
@@ -76,12 +113,15 @@
       "block_order": [
         "text",
         "title",
+        "judge_me_reviews_preview_badge_gWVkjz",
         "price",
+        "afterpay_on_site_messaging_payments_messaging_qqqwqP",
         "variant_picker",
         "quantity_selector",
         "buy_buttons",
         "collapsible_tab_QrAJQU",
         "collapsible_tab_hm3qEH",
+        "judge_me_reviews_review_widget_MymimR",
         "description",
         "share"
       ],
